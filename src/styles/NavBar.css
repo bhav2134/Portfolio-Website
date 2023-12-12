@@ -1,0 +1,133 @@
+.navbar {
+    width: 100%;
+    height: 100px;
+    background: #000000;
+  }
+  
+  .links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .links a::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .links a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .links a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0;
+    background: hsl(200 100% 80%);
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  
+  .links a {
+    position: relative;
+    font-size: 5rem; /* Adjust font size as needed */
+    text-decoration: none;
+    color: white; /* Adjust text color as needed */
+  }
+  
+  /* Add this rule to target all links in the .navbar */
+  .navbar .links a::before {
+    background: hsl(200 100% 80%); /* Use the same background color as defined above */
+  }
+  
+  /* Additional styling for navbar links on hover */
+  .navbar .links a:hover {
+    color: #FFD700; /* Change the color to your desired hover color */
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 25px;
+    
+  }
+  
+  .toggleButton {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .toggleButton svg {
+    font-size: 50px;
+  }
+  .toggleButton button {
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #open {
+    height: 100vh;
+  }
+  
+  #open .links {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 100px;
+
+  }
+  
+  #open a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .navbar a {
+      width: 70px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .toggleButton {
+      display: flex;
+    }
+    #close a {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .toggleButton {
+      display: none;
+    }
+  
+    .hiddenLinks {
+      display: none;
+    }
+  
+    #open {
+      height: 100px;
+    }
+  
+    #open .links {
+      flex-direction: row;
+    }
+  }
+
+  
