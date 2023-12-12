@@ -11,6 +11,12 @@ function Home() {
           <p> 
             I'm a computer science student at Toronto Metropolitan University with a passion for learning
           </p>
+        </div>
+        <div className="scroll-indicator">
+          <span>Scroll down</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
         </div> 
       </div>
       <div className="skills">
