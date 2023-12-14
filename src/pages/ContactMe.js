@@ -8,10 +8,8 @@ const ContactMe = () => {
 
   const sendEmail = (e) => {
     e.preventDefault()
-
-    emailjs
-      .sendForm('service_7b2is8r', 'template_c4arnmc', form.current, '1K7N3al0S8zAj6ZkP')
-      .then(
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_KEY, process.env.REACT_APP_TEMPLATE_KEY, e.target, process.env.REACT_APP_USER_KEY)
+        .then(
         () => {
           alert('Message successfully sent!')
           window.location.reload(false)
