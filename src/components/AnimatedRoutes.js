@@ -4,7 +4,6 @@ import Home from '../pages/Home';
 import Projects from '../pages/Projects';
 import Experience from '../pages/Experience';
 import ContactMe from '../pages/ContactMe';
-import MyResume from '../pages/MyResume';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
@@ -24,7 +23,6 @@ function AnimatedRoutes() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/experience" element={<Experience />} />
                     <Route path="/contactme" element={<ContactMe />} />
-                    <Route path="/resume" element={<MyResume />} />
                 </Routes>
             </motion.div>
         </AnimatePresence>
